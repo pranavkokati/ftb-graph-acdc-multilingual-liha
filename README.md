@@ -84,10 +84,7 @@ boilerplate unrelated to this project. The packages that actually matter are: `t
 `transformers`, `accelerate`, `bitsandbytes`, `networkx`, `langdetect`, `langid`. Worth trimming
 this down to a minimal `requirements.txt` before anyone tries to reproduce outside Kaggle.
 
-Notebooks assume a Kaggle T4×2 GPU runtime and load models in fp32 (recommended for EAP — fp16
-gradients are noisy/underflow-prone near zero). Larger models (Qwen2.5-7B pair, aya-expanse-8b)
-are loaded in 4-bit via `bitsandbytes` to fit in memory; the 1.5B pair and all standalone models
-load in full precision.
+Notebooks assume a Kaggle T4×2 GPU runtime and load models in fp16.
 
 # Steps to Reproduce
 
