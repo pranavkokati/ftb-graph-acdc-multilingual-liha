@@ -90,7 +90,7 @@ Notebooks assume a Kaggle T4×2 GPU runtime and load models in fp16.
 
 ## Clone and instantiate environment
 ```bash
-git clone https://github.com/your-username/ftb-graph.git
+git clone https://github.com/ajlrza/ftb-graph-acdc-multilingual-liha.git
 cd src
 python3 -m venv venv
 source venv/bin/activate
