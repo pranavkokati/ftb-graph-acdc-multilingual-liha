@@ -1,0 +1,87 @@
+{
+  "n_samples": 15,
+  "mean_target_exit_layer": 6.933333333333334,
+  "median_target_exit_layer": 9.0,
+  "pivot_dominant_layer_counts": {
+    "12": 3
+  },
+  "lang_counts_per_layer": [
+    {
+      "null": 9,
+      "es": 3,
+      "fr": 1,
+      "ru": 2
+    },
+    {
+      "null": 9,
+      "es": 3,
+      "fr": 1,
+      "ru": 2
+    },
+    {
+      "null": 9,
+      "es": 3,
+      "fr": 2,
+      "ru": 1
+    },
+    {
+      "null": 10,
+      "es": 3,
+      "fr": 2
+    },
+    {
+      "null": 12,
+      "es": 2,
+      "fr": 1
+    },
+    {
+      "null": 11,
+      "es": 2,
+      "fr": 1,
+      "ru": 1
+    },
+    {
+      "null": 10,
+      "fr": 3,
+      "zh": 1,
+      "ru": 1
+    },
+    {
+      "null": 10,
+      "fr": 3,
+      "ja": 1,
+      "zh": 1
+    },
+    {
+      "null": 10,
+      "fr": 3,
+      "ja": 1,
+      "zh": 1
+    },
+    {
+      "null": 8,
+      "fr": 4,
+      "zh": 2,
+      "ja": 1
+    },
+    {
+      "null": 8,
+      "fr": 4,
+      "zh": 1,
+      "ja": 1,
+      "ru": 1
+    },
+    {
+      "zh": 2,
+      "es": 1,
+      "ja": 1,
+      "fr": 3,
+      "null": 8
+    },
+    {
+      "null": 12,
+      "en": 3
+    }
+  ],
+  "n_layers_plus_embed": 13
+}

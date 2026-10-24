@@ -1,0 +1,840 @@
+{
+  "model": "gpt2",
+  "usable_langs": [
+    "en",
+    "fr",
+    "es",
+    "zh",
+    "ru",
+    "ja"
+  ],
+  "verified_graph": {
+    "n_nodes": 29,
+    "n_edges": 28,
+    "sources": [
+      "L1H1",
+      "L1H6"
+    ],
+    "sinks": [
+      "L3H1",
+      "L3H2",
+      "L3H3",
+      "L3H11",
+      "L2H0",
+      "L2H1",
+      "L2H4",
+      "L2H6",
+      "L4H0",
+      "L4H2",
+      "L4H7",
+      "L4H8",
+      "L6H0",
+      "L6H2",
+      "L6H5",
+      "L6H11",
+      "L5H1",
+      "L5H4",
+      "L5H8",
+      "L5H10",
+      "L6H1",
+      "L6H3",
+      "L6H7",
+      "L8H1",
+      "L8H2",
+      "L8H3",
+      "L8H5"
+    ],
+    "heads": [
+      "L4H0",
+      "L3H1",
+      "L5H4",
+      "L5H1",
+      "L5H10",
+      "L8H3",
+      "L1H6",
+      "L6H2",
+      "L6H5",
+      "L6H11",
+      "L4H2",
+      "L3H3",
+      "L4H8",
+      "L8H2",
+      "L8H5",
+      "L2H4",
+      "L2H1",
+      "L6H1",
+      "L6H7",
+      "L3H2",
+      "L4H7",
+      "L3H11",
+      "L5H8",
+      "L8H1",
+      "L1H1",
+      "L2H0",
+      "L2H6",
+      "L6H0",
+      "L6H3"
+    ]
+  },
+  "causal_scrubbing_validation": {
+    "model": "gpt2",
+    "n_in_graph_heads": 29,
+    "n_out_graph_heads_sampled": 29,
+    "baseline_metric_mean": 3.485894966125488,
+    "in_graph_resample_drop": {
+      "mean": 0.17573490142822265,
+      "lo": 0.044036913514137264,
+      "hi": 0.3320017582178115,
+      "n": 20
+    },
+    "out_of_graph_resample_drop": {
+      "mean": 0.13398444652557373,
+      "lo": -0.07191517055034638,
+      "hi": 0.31768989741802206,
+      "n": 20
+    },
+    "permutation_test": {
+      "observed_diff": 0.04175045490264892,
+      "p_value": 0.7462537462537463,
+      "n_perm": 1000
+    },
+    "necessity_supported": false
+  },
+  "latent_pivot_profile": {
+    "n_samples": 15,
+    "mean_target_exit_layer": 6.933333333333334,
+    "median_target_exit_layer": 9.0,
+    "pivot_dominant_layer_counts": {
+      "12": 3
+    },
+    "n_layers_plus_embed": 13
+  },
+  "pivot_circuit_correlation": {
+    "mean_circuit_layer": 4.551724137931035,
+    "mean_target_exit_layer": 6.933333333333334,
+    "fraction_circuit_heads_at_or_after_pivot_exit": 0.13793103448275862,
+    "circuit_sits_downstream_of_pivot": false
+  },
+  "steering_sufficiency": [
+    {
+      "from_lang": "es",
+      "to_lang": "en",
+      "alpha": 2.0,
+      "mean_metric_shift": 7.95617135365804,
+      "n_samples": 3,
+      "flip_rate": 0.6666666666666666
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "en",
+      "alpha": 4.0,
+      "mean_metric_shift": 12.937913417816162,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "en",
+      "alpha": 8.0,
+      "mean_metric_shift": 18.56996234258016,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "en",
+      "alpha": 2.0,
+      "mean_metric_shift": 6.914463520050049,
+      "n_samples": 4,
+      "flip_rate": 0.75
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "en",
+      "alpha": 4.0,
+      "mean_metric_shift": 12.252840399742126,
+      "n_samples": 4,
+      "flip_rate": 0.75
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "en",
+      "alpha": 8.0,
+      "mean_metric_shift": 17.55818283557892,
+      "n_samples": 4,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "en",
+      "alpha": 2.0,
+      "mean_metric_shift": 7.365320682525635,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "en",
+      "alpha": 4.0,
+      "mean_metric_shift": 12.91860055923462,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "en",
+      "alpha": 8.0,
+      "mean_metric_shift": 16.60207223892212,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "en",
+      "alpha": 2.0,
+      "mean_metric_shift": 6.356836318969727,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "en",
+      "alpha": 4.0,
+      "mean_metric_shift": 10.732288360595703,
+      "n_samples": 4,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "en",
+      "alpha": 8.0,
+      "mean_metric_shift": 13.690688610076904,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "en",
+      "alpha": 2.0,
+      "mean_metric_shift": 9.644561529159546,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "en",
+      "alpha": 4.0,
+      "mean_metric_shift": 15.69509744644165,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "en",
+      "alpha": 8.0,
+      "mean_metric_shift": 18.720884799957275,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "es",
+      "alpha": 2.0,
+      "mean_metric_shift": 5.868017315864563,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "es",
+      "alpha": 4.0,
+      "mean_metric_shift": 6.359729647636414,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "es",
+      "alpha": 8.0,
+      "mean_metric_shift": 9.270018696784973,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "es",
+      "alpha": 2.0,
+      "mean_metric_shift": 1.8774826526641846,
+      "n_samples": 4,
+      "flip_rate": 0.5
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "es",
+      "alpha": 4.0,
+      "mean_metric_shift": 2.9053702354431152,
+      "n_samples": 4,
+      "flip_rate": 0.75
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "es",
+      "alpha": 8.0,
+      "mean_metric_shift": 3.6975852251052856,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "es",
+      "alpha": 2.0,
+      "mean_metric_shift": 11.59538459777832,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "es",
+      "alpha": 4.0,
+      "mean_metric_shift": 14.27324390411377,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "es",
+      "alpha": 8.0,
+      "mean_metric_shift": 18.4526424407959,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "es",
+      "alpha": 2.0,
+      "mean_metric_shift": 8.373547792434692,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "es",
+      "alpha": 4.0,
+      "mean_metric_shift": 11.548354387283325,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "es",
+      "alpha": 8.0,
+      "mean_metric_shift": 15.44423508644104,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "es",
+      "alpha": 2.0,
+      "mean_metric_shift": 12.449142694473267,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "es",
+      "alpha": 4.0,
+      "mean_metric_shift": 14.936914205551147,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "es",
+      "alpha": 8.0,
+      "mean_metric_shift": 18.8315269947052,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "fr",
+      "alpha": 2.0,
+      "mean_metric_shift": 5.175188779830933,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "fr",
+      "alpha": 4.0,
+      "mean_metric_shift": 6.217122554779053,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "fr",
+      "alpha": 8.0,
+      "mean_metric_shift": 10.33873176574707,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "fr",
+      "alpha": 2.0,
+      "mean_metric_shift": 1.4103620847066243,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "fr",
+      "alpha": 4.0,
+      "mean_metric_shift": 1.745470364888509,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "fr",
+      "alpha": 8.0,
+      "mean_metric_shift": 3.33705202738444,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "fr",
+      "alpha": 2.0,
+      "mean_metric_shift": 8.09896469116211,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "fr",
+      "alpha": 4.0,
+      "mean_metric_shift": 10.445781707763672,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "fr",
+      "alpha": 8.0,
+      "mean_metric_shift": 14.47605037689209,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "fr",
+      "alpha": 2.0,
+      "mean_metric_shift": 5.154499650001526,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "fr",
+      "alpha": 4.0,
+      "mean_metric_shift": 7.414486646652222,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "fr",
+      "alpha": 8.0,
+      "mean_metric_shift": 10.984723091125488,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "fr",
+      "alpha": 2.0,
+      "mean_metric_shift": 8.588993787765503,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "fr",
+      "alpha": 4.0,
+      "mean_metric_shift": 11.59668779373169,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "fr",
+      "alpha": 8.0,
+      "mean_metric_shift": 15.340462684631348,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "zh",
+      "alpha": 2.0,
+      "mean_metric_shift": 5.62748384475708,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "zh",
+      "alpha": 4.0,
+      "mean_metric_shift": 8.054532051086426,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "zh",
+      "alpha": 8.0,
+      "mean_metric_shift": 11.113228797912598,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "zh",
+      "alpha": 2.0,
+      "mean_metric_shift": 11.968166987101236,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "zh",
+      "alpha": 4.0,
+      "mean_metric_shift": 15.802924791971842,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "zh",
+      "alpha": 8.0,
+      "mean_metric_shift": 20.817099571228027,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "zh",
+      "alpha": 2.0,
+      "mean_metric_shift": 8.849263668060303,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "zh",
+      "alpha": 4.0,
+      "mean_metric_shift": 12.229904890060425,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "zh",
+      "alpha": 8.0,
+      "mean_metric_shift": 16.288309335708618,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "zh",
+      "alpha": 2.0,
+      "mean_metric_shift": 0.1409163475036621,
+      "n_samples": 4,
+      "flip_rate": 0.5
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "zh",
+      "alpha": 4.0,
+      "mean_metric_shift": 0.1990349292755127,
+      "n_samples": 4,
+      "flip_rate": 0.5
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "zh",
+      "alpha": 8.0,
+      "mean_metric_shift": 0.2642369270324707,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "zh",
+      "alpha": 2.0,
+      "mean_metric_shift": 0.17534732818603516,
+      "n_samples": 4,
+      "flip_rate": 0.5
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "zh",
+      "alpha": 4.0,
+      "mean_metric_shift": 0.28712940216064453,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "zh",
+      "alpha": 8.0,
+      "mean_metric_shift": 0.42402052879333496,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "ru",
+      "alpha": 2.0,
+      "mean_metric_shift": 5.547853708267212,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "ru",
+      "alpha": 4.0,
+      "mean_metric_shift": 7.011847496032715,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "ru",
+      "alpha": 8.0,
+      "mean_metric_shift": 9.23219633102417,
+      "n_samples": 4,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "ru",
+      "alpha": 2.0,
+      "mean_metric_shift": 13.206059137980143,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "ru",
+      "alpha": 4.0,
+      "mean_metric_shift": 16.372880935668945,
+      "n_samples": 3,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "ru",
+      "alpha": 8.0,
+      "mean_metric_shift": 20.366914749145508,
+      "n_samples": 3,
+      "flip_rate": 0.3333333333333333
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "ru",
+      "alpha": 2.0,
+      "mean_metric_shift": 9.536703109741211,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "ru",
+      "alpha": 4.0,
+      "mean_metric_shift": 12.813766717910767,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "ru",
+      "alpha": 8.0,
+      "mean_metric_shift": 15.448982238769531,
+      "n_samples": 4,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "ru",
+      "alpha": 2.0,
+      "mean_metric_shift": 0.18106460571289062,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "ru",
+      "alpha": 4.0,
+      "mean_metric_shift": 0.26073169708251953,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "ru",
+      "alpha": 8.0,
+      "mean_metric_shift": 0.33499622344970703,
+      "n_samples": 1,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "ru",
+      "alpha": 2.0,
+      "mean_metric_shift": 0.4202890396118164,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "ru",
+      "alpha": 4.0,
+      "mean_metric_shift": 0.5885086059570312,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ja",
+      "to_lang": "ru",
+      "alpha": 8.0,
+      "mean_metric_shift": 0.7438580989837646,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "ja",
+      "alpha": 2.0,
+      "mean_metric_shift": 6.287609815597534,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "ja",
+      "alpha": 4.0,
+      "mean_metric_shift": 8.658262252807617,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "en",
+      "to_lang": "ja",
+      "alpha": 8.0,
+      "mean_metric_shift": 12.326613426208496,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "ja",
+      "alpha": 2.0,
+      "mean_metric_shift": 14.102731068929037,
+      "n_samples": 3,
+      "flip_rate": 0.3333333333333333
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "ja",
+      "alpha": 4.0,
+      "mean_metric_shift": 18.03244908650716,
+      "n_samples": 3,
+      "flip_rate": 0.3333333333333333
+    },
+    {
+      "from_lang": "es",
+      "to_lang": "ja",
+      "alpha": 8.0,
+      "mean_metric_shift": 22.508649826049805,
+      "n_samples": 3,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "ja",
+      "alpha": 2.0,
+      "mean_metric_shift": 9.926517724990845,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "ja",
+      "alpha": 4.0,
+      "mean_metric_shift": 13.110093832015991,
+      "n_samples": 4,
+      "flip_rate": 0.25
+    },
+    {
+      "from_lang": "fr",
+      "to_lang": "ja",
+      "alpha": 8.0,
+      "mean_metric_shift": 17.566057443618774,
+      "n_samples": 4,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "ja",
+      "alpha": 2.0,
+      "mean_metric_shift": 0.15286540985107422,
+      "n_samples": 1,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "ja",
+      "alpha": 4.0,
+      "mean_metric_shift": 0.1525592803955078,
+      "n_samples": 1,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "zh",
+      "to_lang": "ja",
+      "alpha": 8.0,
+      "mean_metric_shift": 0.19745445251464844,
+      "n_samples": 1,
+      "flip_rate": 1.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "ja",
+      "alpha": 2.0,
+      "mean_metric_shift": 0.33574485778808594,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "ja",
+      "alpha": 4.0,
+      "mean_metric_shift": 0.3886373043060303,
+      "n_samples": 4,
+      "flip_rate": 0.0
+    },
+    {
+      "from_lang": "ru",
+      "to_lang": "ja",
+      "alpha": 8.0,
+      "mean_metric_shift": 0.4785168170928955,
+      "n_samples": 4,
+      "flip_rate": 1.0
+    }
+  ]
+}
