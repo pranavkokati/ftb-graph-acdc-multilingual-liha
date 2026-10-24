@@ -239,6 +239,44 @@ tested. That is a real confound on the log-prob-diff metric (it is partly compar
 not only language identity) that the original pipeline did not surface, and this report flags it
 rather than silently absorbing it into the headline numbers.
 
+### Comparison against the published FTB Graph / LIHA papers
+
+This repository is the companion code for two preprints by the repo owner, Anjelo Jann Laroza:
+*"FTB Graph: Determining and Validating First-token Broadcasters and Language-Identity Head
+Circuits in Multilingual Language Models"* (arXiv:2609.30954, under review at AAAI-27) and
+*"First-Token Broadcasters: Mechanistic Origins of Language Identity and Distributed Robustness in
+Transformers"* (arXiv:2606.22361), which introduces LIHA (Language Identity Head Ablation):
+zero-ablate each head individually, generate, and measure the language-detector switch rate across
+2,700 Flores-200 prompt-language pairs. `scripts/liha_crossvalidation.py` directly tests this
+package's methods against both papers' own reported numbers for `gpt2`, rather than only against
+generic literature. See `RESULTS.md` for the full numbers; headline findings:
+
+* **Specificity.** The FTB Graph paper reports GPT-2's own verified circuit ends up with
+  **143 of 144 heads in-graph** and explicitly flags this as undermining its necessity/irrelevance
+  claim (the out-of-graph comparison set has essentially one head left). The EAP-IG + FDR-corrected
+  pipeline in this package produces a **29-of-144-head** circuit for the same model — real
+  specificity, directly answering a limitation the original authors named themselves.
+* **EAP fidelity.** The FTB Graph paper reports plain-EAP-to-exact-patching Pearson correlation of
+  **r = −0.226** for GPT-2 (i.e. the linear approximation is *negatively* correlated with the real
+  causal effect it is supposed to approximate). `liha_crossvalidation.py` recomputes this same
+  correlation using EAP-IG instead of plain EAP on this package's circuit; see `RESULTS.md` for
+  whether integrating the gradient along the path actually fixes the sign problem or not — this is
+  reported honestly either way, not cherry-picked.
+* **Convergent heads.** LIHA's own top-5 switch-rate heads for GPT-2 are, in order,
+  `L6H1` (switch rate 0.32, 3.23σ above the population mean), `L0H4`, `L3H1`, `L9H9`, `L7H3`.
+  `L6H1` and `L3H1` are independently present in this package's EAP-IG-discovered,
+  exact-patching-verified circuit — found by a completely different method (gradient-based edge
+  attribution + exact activation patching + FDR correction) from LIHA's (ablate-and-langdetect
+  switch rate). `liha_crossvalidation.py` also resample-ablates (rather than zero-ablates) exactly
+  LIHA's reported top-5 heads to check whether a less destructive counterfactual intervention
+  reproduces their ranking.
+* **Compensatory redistribution.** The LIHA paper reports that ablating `L6H1` triggers a
+  statistically significant (p<10⁻⁵) compensatory increase in causal contribution concentrated in
+  layers 7–9, specifically. `liha_crossvalidation.py` tests this independently: it reruns node
+  attribution with `L6H1` clamped to zero throughout (not just measuring the output once) and checks
+  whether the resulting shift in other heads' attribution scores is in fact concentrated in layers
+  7–9 versus the rest of the network.
+
 ### Honest scope of what was actually run
 
 This package was validated end-to-end on `gpt2` (124M) on CPU in this environment; see

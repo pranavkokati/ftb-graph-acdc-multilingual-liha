@@ -1,0 +1,126 @@
+{
+  "eap_vs_exact_patching_correlation": {
+    "ours_eap_ig_plus_exact": -0.8735981885174466,
+    "n_edges": 200,
+    "published_ftb_graph_plain_eap": -0.226
+  },
+  "published_liha_top5_head_comparison": {
+    "L6H1": {
+      "published_liha": {
+        "switch_rate": 0.32,
+        "sigma_above_mean": 3.23
+      },
+      "resample_ablation_metric_drop": {
+        "mean": 0.014126141866048178,
+        "lo": 0.004773246248563131,
+        "hi": 0.02512357383966446,
+        "n": 24
+      },
+      "in_eap_ig_verified_circuit": true
+    },
+    "L0H4": {
+      "published_liha": {
+        "switch_rate": 0.28,
+        "sigma_above_mean": null
+      },
+      "resample_ablation_metric_drop": {
+        "mean": -0.010690311590830484,
+        "lo": -0.04154854714870453,
+        "hi": 0.020709451536337516,
+        "n": 24
+      },
+      "in_eap_ig_verified_circuit": false
+    },
+    "L3H1": {
+      "published_liha": {
+        "switch_rate": 0.28,
+        "sigma_above_mean": null
+      },
+      "resample_ablation_metric_drop": {
+        "mean": 0.0033173958460489907,
+        "lo": -0.004239925742149353,
+        "hi": 0.010665533939997352,
+        "n": 24
+      },
+      "in_eap_ig_verified_circuit": true
+    },
+    "L9H9": {
+      "published_liha": {
+        "switch_rate": 0.28,
+        "sigma_above_mean": null
+      },
+      "resample_ablation_metric_drop": {
+        "mean": 0.005163908004760742,
+        "lo": 0.001274965206782023,
+        "hi": 0.010227477550506587,
+        "n": 24
+      },
+      "in_eap_ig_verified_circuit": false
+    },
+    "L7H3": {
+      "published_liha": {
+        "switch_rate": 0.24,
+        "sigma_above_mean": null
+      },
+      "resample_ablation_metric_drop": {
+        "mean": -0.008829096953074137,
+        "lo": -0.026966149608294167,
+        "hi": 0.007965861757596329,
+        "n": 24
+      },
+      "in_eap_ig_verified_circuit": false
+    }
+  },
+  "l6h1_ablation_compensatory_redistribution_test": {
+    "baseline_mean_abs_attribution_by_layer": {
+      "9": 0.038252017086986397,
+      "8": 0.039467756838443314,
+      "11": 0.03853307779540197,
+      "0": 0.027660214177811004,
+      "10": 0.028663984539510547,
+      "4": 0.016663984249223374,
+      "6": 0.014631700523207452,
+      "7": 0.018553486914719818,
+      "2": 0.012877017416283505,
+      "1": 0.012552312706904762,
+      "3": 0.00811516166113001,
+      "5": 0.00946145744709131
+    },
+    "ablated_mean_abs_attribution_by_layer": {
+      "9": 0.038320136922190315,
+      "8": 0.03936907833660069,
+      "11": 0.038712565905522446,
+      "0": 0.027632635717762036,
+      "10": 0.028801581787433864,
+      "4": 0.017049607338151414,
+      "6": 0.013704888863173894,
+      "7": 0.018392224595755936,
+      "2": 0.012936932095196122,
+      "1": 0.01235812564383802,
+      "3": 0.008230096056700456,
+      "5": 0.009441866415443199
+    },
+    "delta_by_layer": {
+      "0": -2.7578460048967995e-05,
+      "1": -0.00019418706306674124,
+      "2": 5.991467891261655e-05,
+      "3": 0.00011493439557044675,
+      "4": 0.00038562308892804015,
+      "5": -1.9591031648110574e-05,
+      "6": -0.0009268116600335587,
+      "7": -0.0001612623189638819,
+      "8": -9.867850184262783e-05,
+      "9": 6.811983520391834e-05,
+      "10": 0.000137597247923317,
+      "11": 0.00017948811012047372
+    },
+    "predicted_layers": [
+      7,
+      8,
+      9
+    ],
+    "predicted_layers_mean_delta": -6.394032853419714e-05,
+    "other_layers_mean_delta": -3.229007703805381e-05,
+    "redistribution_concentrated_in_predicted_layers": false
+  }
+}
